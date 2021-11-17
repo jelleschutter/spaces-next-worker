@@ -1,10 +1,14 @@
-name = "spaces-next-worker"
+name = "spaces-next"
 type = "javascript"
-zone_id = ""
-account_id = ""
-route = ""
 workers_dev = true
-compatibility_date = "2021-11-16"
+vars = { ENVIRONMENT = "dev" }
+
+[env.production]
+name = "spaces-next-prod"
+vars = { ENVIRONMENT = "production" }
+zone_id = "0a628876b41eedf033dffbfb594ed272"
+account_id = "663a6d58113973b3c4d84a1a4a094389"
+route = "spaces-next.schutter.xyz/*"
 
 [build]
 command = "npm install && npm run build"
